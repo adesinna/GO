@@ -5,6 +5,32 @@ import (
 	"fmt"
 )
 
+func loop_test() int64 {
+    // sum is inferred as an 'int'
+    sum := 0
+
+    for i := range 11 {
+        if i == 9 {
+            fmt.Println("Skipping 9...")
+            continue 
+        }
+
+        // Note: i will never reach 11 because the loop condition is i < 11
+        if i == 10 { 
+            fmt.Println("Reaching the end at 10")
+            sum += i // decide if you want to add 10 before breaking
+            break
+        }
+
+        fmt.Printf("Current number: %v\n", i)
+        sum += i
+    }
+
+    // You must convert 'int' to 'int64' to match the return type
+    return int64(sum)
+}
+
+
 // addMoney takes the amount and current balance, returning the new total.
 func addMoney(amount, balance float64) (float64, error) {
 	if amount <= 0 {
