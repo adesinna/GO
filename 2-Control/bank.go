@@ -103,4 +103,8 @@ func main() {
 			fmt.Println("Invalid choice. Please try again.")
 		}
 	}
+
+	test := loop_test()
+
+	fmt.Println(test)
 }
