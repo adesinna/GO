@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"packages/fileops"
+	"github.com/Pallinder/go-randomdata"
 
 )
 
@@ -11,6 +12,7 @@ func main() {
 	const accountBalanceFile = "balance.txt"
 
 	fmt.Println("Welcome to the Shanana Bank (SB)")
+	fmt.Println("Reach us 24/7 @",randomdata.PhoneNumber())
 
 	// --- 1. INITIAL LOAD FROM FILE ---
 	balance, err := fileops.GetFloatFromFile(accountBalanceFile)
