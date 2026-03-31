@@ -1,0 +1,39 @@
+If you need to export your go code, you need to do it as a module in other to run it directly.
+
+go build .
+go run . 
+
+This will not work until you make sure you create a module.
+
+Module contains many packages
+
+
+
+
+go mod init github.com/username/my-project
+
+use it in your go project as
+
+import "github.com/username/my-project"
+
+
+1. Working with variables
+
+Integers: int and uint: Platform-dependent size (32 or 64 bits).
+
+Specific sizes: int8, int16, int32, int64 (and their unsigned uint counterparts).
+
+byte: Alias for uint8.
+
+rune: Alias for int32 (represents a Unicode code point).
+
+Floating-Point: float32, float64.
+
+Complex: complex64, complex128.
+
+Boolean Type
+bool: Can only be true or false.
+
+String Type
+string: A sequence of bytes (usually UTF-8 text). Strings in Go are immutable—once created, you cannot change their contents.
+
